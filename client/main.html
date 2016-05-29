@@ -1,0 +1,57 @@
+<head>
+  <title>Contacts Manager</title>
+</head>
+
+<body>
+    <div class="container">
+
+        {{> contactList}}
+
+    </div>
+
+</body>
+
+<template name="contactList">
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-8 col-md-offset-2">
+            <h3>Contact Manager</h3>
+
+            <button class="btn btn-success" id="cmdAddContact" title="Click to add a new contact"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;New Contact</button>
+
+            <p style="color: #ff0000; margin: 10px 0 10px 0;">
+                {{errMessage}}
+            </p>
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="font-style: italic;">Actions</th>
+                        <th>Name</th>
+                        <th>BirthDate</th>
+                        <th>Occupation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each contact}}
+                        <tr>
+                            <td>
+                                <button class="btn btn-sm btn-primary" id="cmdEditContact" title="Click to edit contact"><span class="glyphicon glyphicon-edit"></span></button>
+                                <button class="btn btn-sm btn-danger" id="cmdDeleteContact" title="Click to remove contact"><span class="glyphicon glyphicon-remove"></span></button>
+                            </td>
+                            <td>{{firstName}} {{lastName}}</td>
+                            <td>{{formattedDate birthDate}}</td>
+                            <td>{{occupation}}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {{> newContact (contactHandler this) }}
+    {{> editContact (contactHandler this) }}
+
+
+</template>

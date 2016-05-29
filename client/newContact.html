@@ -1,0 +1,37 @@
+<template name="newContact">
+
+    <div class="modal fade" id="newContactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header-success" style="min-height: 24px;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Create New Contact</h4>
+                </div>
+                <div class="modal-body" style="color: #444;">
+                    {{#autoForm
+                        schema=contactSchema
+                        id="newContactForm"
+                        type="method"
+                        meteormethod="createContact"
+                    }}
+
+                        {{> afQuickField name="firstName"}}
+                        {{> afQuickField name="lastName" }}
+                        {{> afQuickField name="birthDate" }}
+                        {{> afQuickField name="occupation" }}
+                        {{> afQuickField name="comment" }}
+
+                        <div style="margin-bottom: 7px;">
+                            <button type="submit" class="btn btn-primary">OK</button>
+                            <button type="button" class="btn btn-default cancel" data-dismiss="modal">Cancel</button>
+                        </div>
+
+                        <div id="errorMessage" style="width: 100%; min-height: 24px; text-align:center; color: #ff0000;"></div>
+
+                    {{/autoForm}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</template>

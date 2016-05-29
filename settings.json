@@ -1,0 +1,12 @@
+{
+      "database": {
+        "server"   : "www.6thcents.com",
+        "database" : "sqldemo",
+        "user"     : "kreig",
+        "password" : "@pplefanatic",
+        "options"  : {
+          "useUTC"     : false,
+          "appName"    : "MeteorApp"
+        }
+      }
+    }
