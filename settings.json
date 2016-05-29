@@ -1,7 +1,7 @@
 {
       "database": {
         "server"   : "put-server-name-here",
-        "database" : "sqldemo",
+        "database" : "put-db-name-here",
         "user"     : "put-userid-here",
         "password" : "put-pw-here",
         "options"  : {
