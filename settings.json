@@ -1,12 +1,12 @@
 {
-      "database": {
-        "server"   : "put-server-name-here",
-        "database" : "put-db-name-here",
-        "user"     : "put-userid-here",
-        "password" : "put-pw-here",
+    "database": {
+        "server"   : "your db instance",
+        "database" : "your db name",
+        "user"     : "user name",
+        "password" : "password",
         "options"  : {
-          "useUTC"     : false,
-          "appName"    : "MeteorApp"
+            "useUTC"     : false,
+            "appName"    : "MeteorApp"
         }
-      }
     }
+}
